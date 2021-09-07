@@ -1,0 +1,317 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	width: 100%;
+	font-family:ARISTOTLE ;
+	background: url('./img/bg2.png') no-repeat;
+	background-size:cover;
+	overflow: hidden;
+}
+body a{
+	text-decoration:  none;
+}
+body input:focus{
+	outline: none;
+}
+body ul li{
+	list-style:none;
+}
+.container {
+	width: 100%;
+	height: 100vh;
+	background: url('./img/Cycle.png') no-repeat;
+	background-size: 95%;
+	background-position: 100% 80%;
+	display: grid;
+	grid-template-columns:8% auto;
+}
+.nav {
+	width: 100%;
+	height: 100%;
+	border-right: 4px solid #fff;
+}
+.menu {
+	border-bottom: 4px solid #fff;
+	padding: 15px 0px;
+	cursor: pointer;
+}
+.menu span {
+	width: 52px;
+	height: 4px;
+	display: block;
+	background: #fff;
+	margin: 6px auto;
+}
+.horiMenu ul li a {
+	writing-mode: sideways-lr;
+	display: block;
+	padding: 14px 20px;
+	font-size: 15px;
+	color: #fff;
+}
+.horiMenu span {
+	display: block;
+	width: 4px;
+	height: 124px;
+	background: #fff;
+	margin-left: 32px;
+}
+
+
+/* details wrapper */
+header {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	text-align: right;
+	padding: 12px 0px;
+}
+header a{
+	color: #3399ff;
+	position: relative;
+}
+header a::after {
+	content: '';
+	width: 80%;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	bottom: -1px;
+	left: 6px;
+}
+.search {
+	direction: rtl;
+	padding-right: 40px;
+	cursor: pointer;
+}
+.icon {
+	width: 35px;
+	height: 35px;
+	background: transparent;
+	border:3px solid #3399ff;
+	position: relative;
+	border-radius: 50%;
+}
+.icon::after {
+	content: '';
+	width: 4px;
+	height: 20px;
+	background: #3399ff;
+	position: absolute;
+	top: 23px;
+	left: 30px;
+	transform: rotate(-45deg);
+}
+
+/* heading */
+.heading {
+	padding: 0px 40px;
+	overflow: hidden;
+}
+h1 {
+	font-size: 63px;
+	color: #fff;
+	padding: 20px 0px;
+	text-shadow: 2px 2px #000,
+	             2px 2px 5px #000;
+	        
+}
+h1 span{
+	color: #3399ff;
+}
+
+p {
+	width: 31%;
+	color: #fff;
+	font-size: 15px;
+}
+.heading a {
+	padding: 8px 20px;
+	display: inline-block;
+	border: 3px solid #3399ff;
+	color: #3399ff;
+	margin: 45px 0px;
+	transition: .5s;
+}
+.heading a:hover {
+	display: inline-block;
+	border: 3px solid #3399ff;
+	background: #3399ff;
+	color: #fff;
+}
+
+
+/* search bar */
+.Soverlay {
+	width: 100%;
+	height: 100vh;
+	background: #fff;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 9999;
+	background: #3399ff;
+	clip-path: circle(0.1% at 97% 5%);
+	display: grid;
+	place-content: center;
+}
+.cross{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9;
+}
+.searchbox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 9;
+	margin: auto;
+}
+.searchbox input {
+	height: 46px;
+	border: 2px solid #000;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	width: 300px;
+	font-size: 20px;
+	padding: 0px 13px;
+	font-family: poppins;
+}
+.img {
+	width: 62px;
+	background: #000;
+	display: grid;
+	place-content: center;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	cursor: pointer;
+	height: 46px;
+}
+.img img {
+	width: 36px;
+	padding: 5px;
+	object-fit: cover;
+}
+
+
+/* hamburger menu */
+.hamburger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #1A1A1A;
+  transform: translateX(-100%);
+  z-index: 99999;
+}
+.hamburger .Hclose {
+	position: absolute;
+	top: 20px;
+	right: 40px;
+	color: #3399ff;
+	font-size: 16px;
+}
+.hamburger ul {
+	padding-left: 8%;
+	padding-top: 8%;
+}
+.hamburger ul li{
+	overflow: hidden;
+}
+.hamburger ul li a{
+  text-decoration: none;
+  color: white;
+  transition: .8s;
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 10px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+ overflow: hidden;
+}
+.hamburger ul li a::after{
+	content: '';
+	width: 0%;
+	height: 5px;
+	background: #3399ff;
+	position: absolute;
+	top: 50%;
+	left: 6px;
+  transition: .8s;
+}
+.hamburger ul li a:hover::after {
+   width: 80%;
+}
+
+.Himg {
+  position: absolute;
+  width: 250px;
+  filter: grayscale(1);
+  height: 300px;
+  mix-blend-mode: difference;
+  top: 0px;
+  left: 0px;
+}
+.bg1 {
+  top: 0px;
+  left: 53%;
+  background: url(./img/bg1.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 1s ease-in-out;
+}
+.bg2 {
+  top: 100px;
+   left: 53%;
+  background: url(./img/bg2.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 1s ease-in-out;
+}
+.bg3 {
+  top: 250px;
+  left: 53%;
+  background: url(./img/bg3.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 1s ease-in-out;
+}
+.bg4 {
+  top: 400px;
+   left: 53%;
+  background: url(./img/bg4.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  opacity: 0;
+  transform: translateY(-50%);
+  transition: 1s ease-in-out;
+}
+
+.L1:hover ~ .bg1,
+.L2:hover ~ .bg2,
+.L3:hover ~ .bg3,
+.L4:hover ~ .bg4 {
+  opacity: 1;
+  transform: translateY(0%) skew(-10deg);
+  transition: 1s ease-in-out;
+}
+.hamburger ul li a:hover {
+  transition: 2s;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px white;
+  font-style: italic;
+}
